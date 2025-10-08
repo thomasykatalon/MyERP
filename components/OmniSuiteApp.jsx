@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
+import Script from 'next/script'; // Import the Next.js Script component
 
 // --- Helper Components (SVG Icons) ---
 const OmniLogoIcon = () => (
@@ -274,6 +275,11 @@ export default function OmniSuiteApp() {
         
         return (
              <div id="customer-modal" className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
+                <Script
+                    src="https://static.katalon.com/libs/traffic-agent/v1/traffic-agent.min.js"
+                    strategy="afterInteractive"
+                    client-code="KA-1591642-01"
+                />
                 <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-lg">
                     <h2 id="customer-modal-title" className="text-2xl font-bold text-gray-800 mb-4">{customer ? 'Edit Customer' : 'Add New Customer'}</h2>
                     <form id="customer-form" onSubmit={handleSubmit}>
