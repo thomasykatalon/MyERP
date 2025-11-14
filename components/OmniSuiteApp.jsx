@@ -378,7 +378,7 @@ export default function OmniSuiteApp() {
             </div>
             
             {/* Modal Renderer */}
-            {modal.type === 'add-item' && <ItemModal onSave={handleSaveItem} onCancel={() => setModal({ type: null, data: null })} />}
+            {modal.type === 'add-item1' && <ItemModal onSave={handleSaveItem} onCancel={() => setModal({ type: null, data: null })} />}
             {modal.type === 'edit-item' && <ItemModal item={modal.data} onSave={handleSaveItem} onCancel={() => setModal({ type: null, data: null })} />}
             {modal.type === 'add-customer' && <CustomerModal onSave={handleSaveCustomer} onCancel={() => setModal({ type: null, data: null })} />}
             {modal.type === 'edit-customer' && <CustomerModal customer={modal.data} onSave={handleSaveCustomer} onCancel={() => setModal({ type: null, data: null })} />}
